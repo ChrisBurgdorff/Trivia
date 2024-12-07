@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "Trivia :)";
+}
+
+<div class="text-center">
+    <h1 class="display-4" id="siteHeader">Trivia</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="card col-md-6 triviaCard">
+            <div class="card-header white-header">
+                <h5 class="card-title" id="questionNumberHeading">SIGN UP!</h5>
+            </div>
+            <div class="card-body">
+                <div id="joinBody">
+                    <form id="enterPlayerForm">
+                        <input type="text"  name="playerName" id="playerName" placeholder="Player Name"/>
+                        <input type="submit" class="btn btn-primary" id="enterPlayer" value="Join Next Game" />
+                    </form>
+                </div>
+                <div id="gameOverBody">
+                    <p class="card-text">GAME OVER!</p>
+                    <p class="card-text">Thanks for playing!</p>
+                </div>
+                <div id="waitingBody">
+                    <p class="card-text">Waiting for Game to Start...</p>
+                </div>
+                <div id="answerResultBody">
+                    <p class="card-text"><span id="wrongReveal">Wrong!</span><span id="correctReveal">Correct!</span></p>
+                    <p class="card-text">The correct answer was <span id="correctAnswerReveal"></span></p>
+                    <p class="card-text">Next Question In <span id="timeRemainingReveal"></span></p>
+                </div>
+                <div id="questionBody">
+                    <p class="card-text" id="question"></p>
+                    <ul class="list-group list-group-flush" id="answers">
+                    </ul>
+                    <button type="button" class="btn btn-primary" id="submitAnswer">Submit</button>
+                    <span id="countdown"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="card col-md-3 text-right triviaCard">
+            <div class="card-header white-header">
+                <h5 class="card-title" id="userListHeading">Lobby</h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush" id="playerQueue">
+                </ul>
+                <button type="button" class="btn btn-info" id="startGame" disabled>Start Game</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 triviaCard">
+            <div class="card">
+                <div class="card-header white-header">
+                    <h5 class="card-title" id="chatHeading">Chat</h5>
+                </div>
+                <div class="card-body">
+                    <div id="chatBox">
+                    </div>
+                    <footer class="chat-footer">
+                        <form id="sendChatForm">
+                            <div class="chat-txt">
+                                <input type="text" name="chatMessage" class="form-control" id="chatMessage" />
+                            </div>
+                            <input type="submit" class="btn btn-danger" id="sendChat" disabled value="Send" />
+                        </form>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="text-center">
+
+</div>
+
+@section scripts{
+    <script type="text/javascript" src="/js/chat.js"></script>
+}
