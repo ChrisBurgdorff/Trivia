@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IS1EfluEiWzZBCmHNWzDsBxbWwpT0ff26ex8DE/X53c=",
+  "Hash": "myQW/lGXdLMWK2wEfyP1EAjP2I4XNwAx7Td3ge+1Fvw=",
   "Source": "SignalRDemo",
   "BasePath": "_content/SignalRDemo",
   "Mode": "Default",
@@ -17,10 +17,10 @@
   ],
   "Assets": [
     {
-      "Identity": "/home/chris/Source/SignalRDemo/obj/Release/net6.0/scopedcss/bundle/SignalRDemo.styles.css",
+      "Identity": "/home/chris/Source/SignalRDemo/obj/release/net6.0/scopedcss/bundle/SignalRDemo.styles.css",
       "SourceId": "SignalRDemo",
       "SourceType": "Computed",
-      "ContentRoot": "/home/chris/Source/SignalRDemo/obj/Release/net6.0/scopedcss/bundle/",
+      "ContentRoot": "/home/chris/Source/SignalRDemo/obj/release/net6.0/scopedcss/bundle/",
       "BasePath": "_content/SignalRDemo",
       "RelativePath": "SignalRDemo.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/chris/Source/SignalRDemo/obj/Release/net6.0/scopedcss/bundle/SignalRDemo.styles.css"
+      "OriginalItemSpec": "/home/chris/Source/SignalRDemo/obj/release/net6.0/scopedcss/bundle/SignalRDemo.styles.css"
     },
     {
-      "Identity": "/home/chris/Source/SignalRDemo/obj/Release/net6.0/scopedcss/projectbundle/SignalRDemo.bundle.scp.css",
+      "Identity": "/home/chris/Source/SignalRDemo/obj/release/net6.0/scopedcss/projectbundle/SignalRDemo.bundle.scp.css",
       "SourceId": "SignalRDemo",
       "SourceType": "Computed",
-      "ContentRoot": "/home/chris/Source/SignalRDemo/obj/Release/net6.0/scopedcss/projectbundle/",
+      "ContentRoot": "/home/chris/Source/SignalRDemo/obj/release/net6.0/scopedcss/projectbundle/",
       "BasePath": "_content/SignalRDemo",
       "RelativePath": "SignalRDemo.bundle.scp.css",
       "AssetKind": "All",
@@ -48,7 +48,7 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/chris/Source/SignalRDemo/obj/Release/net6.0/scopedcss/projectbundle/SignalRDemo.bundle.scp.css"
+      "OriginalItemSpec": "/home/chris/Source/SignalRDemo/obj/release/net6.0/scopedcss/projectbundle/SignalRDemo.bundle.scp.css"
     },
     {
       "Identity": "/home/chris/Source/SignalRDemo/wwwroot/css/site.css",
@@ -1103,6 +1103,91 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Identity": "/home/chris/Source/SignalRDemo/wwwroot/sounds/clock-close.mp3",
+      "SourceId": "SignalRDemo",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/chris/Source/SignalRDemo/wwwroot/",
+      "BasePath": "_content/SignalRDemo",
+      "RelativePath": "sounds/clock-close.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/sounds/clock-close.mp3"
+    },
+    {
+      "Identity": "/home/chris/Source/SignalRDemo/wwwroot/sounds/correct-choice.mp3",
+      "SourceId": "SignalRDemo",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/chris/Source/SignalRDemo/wwwroot/",
+      "BasePath": "_content/SignalRDemo",
+      "RelativePath": "sounds/correct-choice.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/sounds/correct-choice.mp3"
+    },
+    {
+      "Identity": "/home/chris/Source/SignalRDemo/wwwroot/sounds/start-computer.mp3",
+      "SourceId": "SignalRDemo",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/chris/Source/SignalRDemo/wwwroot/",
+      "BasePath": "_content/SignalRDemo",
+      "RelativePath": "sounds/start-computer.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/sounds/start-computer.mp3"
+    },
+    {
+      "Identity": "/home/chris/Source/SignalRDemo/wwwroot/sounds/whoosh.mp3",
+      "SourceId": "SignalRDemo",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/chris/Source/SignalRDemo/wwwroot/",
+      "BasePath": "_content/SignalRDemo",
+      "RelativePath": "sounds/whoosh.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/sounds/whoosh.mp3"
+    },
+    {
+      "Identity": "/home/chris/Source/SignalRDemo/wwwroot/sounds/wrong-answer.mp3",
+      "SourceId": "SignalRDemo",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/chris/Source/SignalRDemo/wwwroot/",
+      "BasePath": "_content/SignalRDemo",
+      "RelativePath": "sounds/wrong-answer.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/sounds/wrong-answer.mp3"
     }
   ]
 }

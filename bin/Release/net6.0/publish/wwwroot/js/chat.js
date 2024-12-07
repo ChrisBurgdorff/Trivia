@@ -21,6 +21,33 @@ function updatePlayerQueue() {
   });
 }
 
+function playWhoosh() {
+  var audio = new Audio("/sounds/whoosh.mp3");
+  audio.loop = false;
+  audio.play();
+}
+function playCorrect() {
+  var audio = new Audio("/sounds/correct-choice.mp3");
+  audio.loop = false;
+  audio.play();
+}
+function playWrong() {
+  var audio = new Audio("/sounds/wrong-answer.mp3");
+  audio.volume = 0.3;
+  audio.loop = false;
+  audio.play();
+}
+function playTick() {
+  var audio = new Audio("/sounds/clock-close.mp3");
+  audio.loop = false;
+  audio.play();
+}
+function playStartComputer() {
+  var audio = new Audio("/sounds/start-computer.mp3");
+  audio.loop = false;
+  audio.play();
+}
+
 //SignalR Stuff
 setupConnection = () => {
   connection = new signalR.HubConnectionBuilder()
@@ -35,6 +62,9 @@ setupConnection = () => {
       <div class="second-part">${chatMessage.message}</div>
       <div class="third-part">${timestampText}</div>
     </div>`);
+    let newScroll = $("#chatBox")[0].scrollHeight;
+    $("#chatBox").animate({scrollTop: newScroll}, 500);
+    playWhoosh();
   });
 
   connection.on("NewUser", (userId) => {
@@ -77,6 +107,7 @@ setupConnection = () => {
   });
 
   connection.on("GameStart", () => {
+    playTick();
     $("#userListHeading").text("Leaderboard");
     $("#questionNumberHeading").text("GAME STARTING...");
     $("#joinBody").hide();
@@ -88,6 +119,7 @@ setupConnection = () => {
   });
 
   connection.on("GameEnd", () => {
+    playStartComputer();
     console.log("GAME OVER MAAAAAANNN");
     $("#questionBody").hide();
     $("#answerResultBody").hide();
@@ -99,6 +131,7 @@ setupConnection = () => {
   });
 
   connection.on("Question", (question) => {
+    playStartComputer();
     localStorage.setItem("submitted", "false");
     localStorage.setItem("correct", "false");
     $("#answerResultBody").hide();
@@ -124,7 +157,8 @@ setupConnection = () => {
     //Start timer and Submit after 20 SECONDS
     let secondsRemaining = 20;
     const startTime = new Date().getTime();
-    var questionTimer = setInterval(function() {
+    var playedSound = false;
+    var questionTimer = setInterval(function() {      
       const now = new Date().getTime();
       var timeLeft = 20 - Math.floor(( (now - startTime) % (1000 * 60)) / 1000);
       $("#countdown").text((timeLeft < 0 ? 0 : timeLeft) + " Seconds Remaining");
@@ -132,14 +166,25 @@ setupConnection = () => {
         $("#answerResultBody").show();
         $("#questionBody").hide();
         if (localStorage.getItem("correct") === "true") {
+          if (!playedSound) {
+            playCorrect();
+            playedSound = true;
+          }          
           $("#wrongReveal").hide();
           $("#correctReveal").show();
         } else {
+          if (!playedSound) {
+            playWrong();
+            playedSound = true;
+          }          
           $("#wrongReveal").show();
           $("#correctReveal").hide();
         }
         $("#correctAnswerReveal").text(question.correctAnswer);
         $("#timeRemainingReveal").text((timeLeft < 0 ? 0 : timeLeft) + " Seconds");
+      }
+      if (timeLeft < 5 && timeLeft >= 4 && localStorage.getItem("submitted") == "false") {
+        playTick();
       }
       if (timeLeft < 0) {
         sendAnswer();
